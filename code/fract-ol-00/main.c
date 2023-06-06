@@ -6,13 +6,11 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/06 00:54:47 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/06 18:07:23 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx.h"
-#include <stdlib.h>
-#include <unistd.h>
+#include "fract_ol.h"
 
 void	free_mlx_and_win_ptr(void *mlx_ptr, void *win_ptr)
 {
@@ -36,6 +34,7 @@ int main(void)
 	void	*mlx_ptr;
 	void	*win_ptr;
 	
+	ft_printf("--DEBUT--");
 	mlx_ptr = mlx_init();
 	win_ptr = mlx_new_window(mlx_ptr, 500, 500, "HELLO WORLD");
 	mlx_pixel_put(mlx_ptr, win_ptr, 250, 250, 0xFFFFFFFF);
@@ -44,4 +43,5 @@ int main(void)
 	free_mlx_and_win_ptr(mlx_ptr, win_ptr);
 	return 0;
 }
-
+// compillation :
+// cc -g3 -I ./minilibx-linux main.c -L ./minilibx-linux -lmlx -lXext -lX11 -lm

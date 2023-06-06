@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"stdlib.h": "c",
+		"fract-ol.h": "c",
+		"fract_ol.h": "c"
+	}
+}
