@@ -6,7 +6,7 @@
 #    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 16:54:23 by yatsu             #+#    #+#              #
-#    Updated: 2023/06/07 14:31:31 by yatsu            ###   ########.fr        #
+#    Updated: 2023/06/07 15:37:23 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,5 +48,32 @@ fclean : clean
 	${RM} ${NAME_BONUS}
 
 re : fclean all
+
+################# Commande perso
+
+# Verifie la norminette
+norme:
+	@ clear
+	@ bash ./verif_norminette_fractol.sh
+
+propre:
+	@ make all -s
+	@ make clean -s
+
+test:
+	@ clear
+	@ make propre -s
+	@ echo "Resultat du programme ${NAME} : "
+	@ echo
+	@ ./${NAME}
+
+val:
+	@ clear
+	@ make propre -s
+	@ echo "Resultat du programme ${NAME} : "
+	@ echo
+	valgrind --leak-check=full --show-leak-kinds=all ./${NAME}
+
+#################
 
 .PHONY : all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/07 13:19:32 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/07 14:53:28 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	deal_key(char *key, void *param)
 	return (0);
 }
 
-int main(void)
+int	main(void)
 {
 	void	*mlx_ptr;
 	void	*win_ptr;
-	
+
 	ft_printf("--DEBUT--\ninput = ");
 	mlx_ptr = mlx_init();
 	win_ptr = mlx_new_window(mlx_ptr, 500, 500, "HELLO WORLD");
@@ -41,7 +41,7 @@ int main(void)
 	mlx_key_hook(win_ptr, deal_key, mlx_ptr);
 	mlx_loop(mlx_ptr);
 	free_mlx_and_win_ptr(mlx_ptr, win_ptr);
-	return 0;
+	return (0);
 }
 // compillation :
 // cc -g3 -I ./minilibx-linux main.c -L ./minilibx-linux -lmlx -lXext -lX11 -lm
