@@ -6,7 +6,7 @@
 #    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 16:54:23 by yatsu             #+#    #+#              #
-#    Updated: 2023/06/07 15:37:23 by yatsu            ###   ########.fr        #
+#    Updated: 2023/06/07 15:44:48 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ re : fclean all
 # Verifie la norminette
 norme:
 	@ clear
-	@ bash ./verif_norminette_fractol.sh
+	@ bash ./script_sh/verif_norminette_fractol.sh
 
 propre:
 	@ make all -s
