@@ -6,7 +6,7 @@
 #    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 16:54:23 by yatsu             #+#    #+#              #
-#    Updated: 2023/06/06 18:43:26 by yatsu            ###   ########.fr        #
+#    Updated: 2023/06/07 14:31:31 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,29 +16,26 @@ SRC =	${SRC_MAIN}
 
 OBJ =	${SRC:.c=.o}
 
-
-MINILIBX_LIB =	./minilibx-linux/libmlx.a
-MINILIBX_FLAGS = -lX11 -lXext -Lminilibx-linux -lmlx
 CC =			cc
 CFLAGS =		-g3 -Wall -Wextra -Werror
-NAME =			fractol
-
-RM =			rm -rf
+MINILIBX_LIB =		-I ./minilibx-linux -L ./minilibx-linux
+MINILIBX_FLAGS =	-lmlx -lXext -lX11 -lm
 
 MAKE_LIBFT = make -s -C ./libft
 LIBFT_A = ./libft/libft.a
 
-all : ${MINILIBX_LIB} ${NAME}
+NAME =			fractol
+
+RM =			rm -rf
 
 ${NAME}: ${OBJ}
 	${MAKE_LIBFT}
-	${CC} ${OBJ} ${CFLAGS} ${LIBFT_A} -o ${NAME}
+	${CC} ${CFLAGS} ${MINILIBX_LIB} ${OBJ} ${MINILIBX_FLAGS} ${LIBFT_A} -o ${NAME}
+
+all : ${NAME}
 
 .c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
-${MINILIBX_LIB}:
-	cd ./minilibx-linux && &{MAKE}
+	${CC} ${CFLAGS} ${MINILIBX_LIB} $< ${MINILIBX_FLAGS} -c -o ${<:.c=.o}
 
 clean :
 	${MAKE_LIBFT} fclean
