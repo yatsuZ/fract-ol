@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/07 15:47:28 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/07 22:54:21 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,3 @@ int	main(void)
 	free_mlx_and_win_ptr(mlx_ptr, win_ptr);
 	return (0);
 }
-// compillation :
-// cc -g3 -I ./minilibx-linux main.c -L ./minilibx-linux -lmlx -lXext -lX11 -lm
