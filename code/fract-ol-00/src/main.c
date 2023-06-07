@@ -6,11 +6,11 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/07 14:53:28 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/07 15:47:28 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract_ol.h"
+#include "../header/fract_ol.h"
 
 void	free_mlx_and_win_ptr(void *mlx_ptr, void *win_ptr)
 {
