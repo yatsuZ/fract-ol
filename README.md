@@ -11,7 +11,7 @@ A chaque étape, vérifier l'absence de fuites de mémoire !!!
 |      Crée une fenetre         | ✅ 08/06/2023 |
 | Faire que en appuyant sur echap la fenetre se ferme | ✅ 08/06/2023 |
 |      Deplacer la fenetre      | ✅ 08/06/2023 |
-| Faire que en appuyant sur la croix la fenetre se ferme |      ❌       |
+| Faire que en appuyant sur la croix la fenetre se ferme |✅ 08/06/2023|
 |    Redimensionner la fenetre  |      ❌       |
 | Ancrer la fenetre en fonction de l'endroit où je la place |      ❌       |
 | Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ❌       |
