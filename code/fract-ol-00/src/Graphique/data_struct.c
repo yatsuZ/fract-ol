@@ -6,23 +6,11 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:09:49 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 13:42:26 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/08 18:34:19 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header/fract_ol.h"
-
-/*
-TO DO :
-	PARTIE		GRAPHIQUE :
-	Crée une fenetre										| V 08/06/2023
-	Faire que en apuyant sur echap la fenetre ce ferme		| V 08/06/2023
-	Deplace la fenetre										| V 08/06/2023
-	Faire que en apuyant sur la croix la fenetre ce ferme	| X
-	Redimensione la fenetre									| X
-	Ancrer la fenetre si je la mets
-	tout a droite prend la partie droite					| X
-*/
 
 t_data_mlx	*free_data(t_data_mlx *data)
 {
