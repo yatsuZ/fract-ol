@@ -28,3 +28,4 @@ A chaque étape, vérifier l'absence de fuites de mémoire !!!
 
 - [vidéo interéssante qui parle des fractales.](https://youtu.be/wUlVFYJIUNA)
 - [Le repo de la minilibx de 42.](https://github.com/42Paris/minilibx-linux) Et internet et des teste pour me famelirisé avec cette library.
+- [DOC POUR la library minilibx](https://harm-smits.github.io/42docs/)

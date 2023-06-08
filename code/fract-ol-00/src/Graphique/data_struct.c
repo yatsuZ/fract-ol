@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:09:49 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 18:36:13 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/08 19:32:53 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // free(data->titre); 
 // SI le titre est dans la heap je free sinon je ne la free pas
-t_data_mlx	*free_data(t_data_mlx *data)
+t_data	*free_data(t_data *data)
 {
 	if (data->mlx_ptr && data->win_ptr)
 		mlx_destroy_window(data->mlx_ptr, data->win_ptr);
@@ -33,12 +33,11 @@ t_data_mlx	*free_data(t_data_mlx *data)
 	return (NULL);
 }
 
-t_data_mlx	*cree_fenetre(char *titre_fenetre, int len_x, int len_y)
+t_data	*cree_fenetre(char *titre_fenetre, int len_x, int len_y)
 {
-	t_data_mlx	*data;
+	t_data	*data;
 
-	ft_printf("--DEBUT--\n");
-	data = ft_calloc(1, sizeof(t_data_mlx));
+	data = ft_calloc(1, sizeof(t_data));
 	if (!data)
 		return (free(data), NULL);
 	data->len_x = len_x;

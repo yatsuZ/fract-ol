@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   constante.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 12:19:41 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 19:45:11 by yatsu            ###   ########.fr       */
+/*   Created: 2023/06/08 19:36:46 by yatsu             #+#    #+#             */
+/*   Updated: 2023/06/08 19:45:26 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
-# include "./lib_import.h"
+#ifndef CONSTANTE_H
+# define CONSTANTE_H
 
-typedef struct s_data
-{
-	void	*mlx_ptr;
-	void	*win_ptr;
-	char	*titre;
-	int		len_x;
-	int		len_y;
-}	t_data;
+# define TRUE 1
+# define FALSE 0
+# define ESC 65307
+# define NO_MASK_EVENT 0L
+# define X_ON_EVENT 17
 
-#endif
+# endif
