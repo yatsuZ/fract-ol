@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 13:08:51 by yatsu            ###   ########.fr       */
+/*   Created: 2023/06/08 12:19:41 by yatsu             #+#    #+#             */
+/*   Updated: 2023/06/08 12:38:01 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/fract_ol.h"
+#ifndef STRUCT_H
+# define STRUCT_H
+# include "./lib_import.h"
 
-/*
-TO DO :
-	PARTIE		GRAPHIQUE | X
-	PARTIE		FRACTAL   | X
-*/
-
-int	main(void)
+typedef struct s_data_mlx
 {
-	t_data_mlx	*data;
+	void	*mlx_ptr;
+	void	*win_ptr;
+	char	*titre;
+	int		len_x;
+	int		len_y;
+}	t_data_mlx;
 
-	data = cree_fenetre("TEST", 500, 500);
-	if (!data)
-		return (1);
-	add_event(data);
-	mlx_loop(data->mlx_ptr);
-	return (free_data(data), 0);
-}
+#endif

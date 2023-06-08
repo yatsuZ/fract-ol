@@ -2,6 +2,11 @@
 	"files.associations": {
 		"stdlib.h": "c",
 		"fract-ol.h": "c",
-		"fract_ol.h": "c"
+		"fract_ol.h": "c",
+		"unistd.h": "c",
+		"mlx.h": "c",
+		"libft.h": "c",
+		"struct.h": "c",
+		"lib_import.h": "c"
 	}
 }

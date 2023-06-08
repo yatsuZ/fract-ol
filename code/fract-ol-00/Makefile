@@ -6,13 +6,18 @@
 #    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 16:54:23 by yatsu             #+#    #+#              #
-#    Updated: 2023/06/07 23:16:00 by yatsu            ###   ########.fr        #
+#    Updated: 2023/06/08 13:08:10 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC_MAIN =	./src/main.c
 
-SRC =	${SRC_MAIN}
+DOSSIER_GRAPHIQUE =	./src/Graphique/
+FICHIER_GRAPHIQUE =	data_struct.c \
+					fenetre_event.c
+
+SRC =	${SRC_MAIN} \
+		${addprefix ${DOSSIER_GRAPHIQUE}, ${FICHIER_GRAPHIQUE}}
 
 OBJ =	${SRC:.c=.o}
 

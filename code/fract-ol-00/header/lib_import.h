@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   lib_import.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 13:08:51 by yatsu            ###   ########.fr       */
+/*   Created: 2023/06/08 12:20:56 by yatsu             #+#    #+#             */
+/*   Updated: 2023/06/08 12:21:36 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/fract_ol.h"
+#ifndef LIB_IMPORT_H
+# define LIB_IMPORT_H
 
-/*
-TO DO :
-	PARTIE		GRAPHIQUE | X
-	PARTIE		FRACTAL   | X
-*/
+# include "./../libft/libft.h"
+# include "./../minilibx-linux/mlx.h"
+# include <stdlib.h>
+# include <unistd.h>
 
-int	main(void)
-{
-	t_data_mlx	*data;
-
-	data = cree_fenetre("TEST", 500, 500);
-	if (!data)
-		return (1);
-	add_event(data);
-	mlx_loop(data->mlx_ptr);
-	return (free_data(data), 0);
-}
+#endif
