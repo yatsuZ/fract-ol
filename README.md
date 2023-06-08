@@ -1,8 +1,11 @@
 # fract-ol
-Fractol est mon premier projet graphique où je vais explorer l'affichage de fractales. J'utiliserai la bibliothèque minilibx pour créer des fenêtres, générer des images et gérer les interactions clavier et souris.
+
+Fractol est mon premier projet graphique où j'explore l'affichage de fractales. J'utilise la bibliothèque minilibx pour créer des fenêtres, générer des images et gérer les interactions clavier et souris.
 
 ## TO DO
-  
+
+A chaque étape, vérifier l'absence de fuites de mémoire !!!
+
 |       CE QUE JE DOIS FAIRE        |  valide      |
 | ----------------------------- | ------------ |
 |      Crée une fenetre         | ✅ 08/06/2023 |
