@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:57:03 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 13:37:11 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/08 18:36:36 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	deal_key(int key, void *data_v)
 {
-	t_data_mlx *data;
+	t_data_mlx	*data;
 
 	data = (t_data_mlx *) data_v;
 	if (key == 65307)

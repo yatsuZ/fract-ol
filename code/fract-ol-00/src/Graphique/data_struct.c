@@ -6,12 +6,14 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:09:49 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 18:34:19 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/08 18:36:13 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header/fract_ol.h"
 
+// free(data->titre); 
+// SI le titre est dans la heap je free sinon je ne la free pas
 t_data_mlx	*free_data(t_data_mlx *data)
 {
 	if (data->mlx_ptr && data->win_ptr)
@@ -21,7 +23,6 @@ t_data_mlx	*free_data(t_data_mlx *data)
 		mlx_destroy_display(data->mlx_ptr);
 		free(data->mlx_ptr);
 	}
-	// free(data->titre); SI le titre est dans la heap je free sinon je ne la free pas
 	data->len_x = 0;
 	data->len_y = 0;
 	data->titre = NULL;
@@ -46,7 +47,8 @@ t_data_mlx	*cree_fenetre(char *titre_fenetre, int len_x, int len_y)
 	data->mlx_ptr = mlx_init();
 	if (!data->mlx_ptr)
 		return (free_data(data));
-	data->win_ptr = mlx_new_window(data->mlx_ptr, data->len_x, data->len_y, data->titre);
+	data->win_ptr = \
+	mlx_new_window(data->mlx_ptr, data->len_x, data->len_y, data->titre);
 	if (!data->win_ptr)
 		return (free_data(data));
 	return (data);
