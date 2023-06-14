@@ -1,0 +1,3 @@
+L'événement GraphicsExpose est activé lorsque des parties d'une fenêtre précédemment exposée doivent être redessinées. Cela peut se produire lorsque la fenêtre est partiellement masquée par d'autres fenêtres puis devient visible à nouveau.
+
+L'événement NoExpose est activé lorsque la fenêtre est exposée mais qu'aucune partie de son contenu n'a besoin d'être redessinée. Cela signifie que la fenêtre est complètement visible sans aucune modification nécessaire.
