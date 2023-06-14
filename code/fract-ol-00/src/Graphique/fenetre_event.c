@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:57:03 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/08 19:45:05 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/06/09 19:43:46 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,22 @@ int	close_with_x(t_data *data)
 	mlx_loop_end(data->mlx_ptr);
 	return (0);
 }
+int	souris_deplacement(int x,int y, t_data *data)
+{
+	ft_printf("Mouse moving in %s, at %dx%d.\n", data->titre, x, y);
+	return (0);
+}
+
+int	idk(void)
+{
+	ft_printf("QUE PASSA ?\n");
+	return (0);
+}
 void	add_event(t_data *data)
 {
 	mlx_hook(data->win_ptr, X_ON_EVENT, \
 	NO_MASK_EVENT, close_with_x, data);
+	mlx_hook(data->win_ptr, ResizeRequest, NO_MASK_EVENT, idk, 0);
+	// mlx_hook(data->win_ptr, MotionNotify, PointerMotionMask, souris_deplacement, data);
 	mlx_key_hook(data->win_ptr, deal_key, data);
 }
