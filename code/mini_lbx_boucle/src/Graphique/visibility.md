@@ -1,1 +1,0 @@
-L'événement VisibilityNotify est activé lorsque la visibilité de la fenêtre change, c'est-à-dire lorsqu'elle devient partiellement ou complètement visible ou lorsqu'elle devient partiellement ou complètement masquée.
