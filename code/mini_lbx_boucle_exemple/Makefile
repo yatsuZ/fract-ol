@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
+#    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 16:54:23 by yatsu             #+#    #+#              #
-#    Updated: 2023/06/08 13:08:10 by yatsu            ###   ########.fr        #
+#    Updated: 2023/08/27 17:49:50 by yzaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ ${NAME}: ${OBJ}
 	${CC} ${CFLAGS} ${MINILIBX_LIB} ${OBJ} ${MINILIBX_FLAGS} ${LIBFT_A} -o ${NAME}
 
 all : ${NAME}
+
+%.o: %.c
+	${CC} ${CFLAGS} -I/usr/include -Imlx_linux -O3 -c $< -o $@
 
 .c.o:
 	${CC} ${CFLAGS} ${MINILIBX_LIB} $< ${MINILIBX_FLAGS} -c -o ${<:.c=.o}

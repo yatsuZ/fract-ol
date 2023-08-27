@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fenetre_event.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:57:03 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/09 19:43:46 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/08/27 16:05:37 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	close_with_x(t_data *data)
 	mlx_loop_end(data->mlx_ptr);
 	return (0);
 }
+
 int	souris_deplacement(int x,int y, t_data *data)
 {
 	ft_printf("Mouse moving in %s, at %dx%d.\n", data->titre, x, y);
