@@ -15,8 +15,8 @@ A chaque étape, vérifier l'absence de fuites de mémoire !!!
 |    Redimensionner la fenetre  |     PAS POSSIBLE     |
 | Ancrer la fenetre en fonction de l'endroit où je la place |     PAS POSSIBLE     |
 | Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ❌       |
-| Pouvoir deplacer la camera avec les fleches |      ❌       |
 | Pouvoir zoomer et dezoome avec la souris |      ❌       |
+| Pouvoir deplacer la camera avec les fleches |      ❌       |
 | En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
 | Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ❌       |
 | Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
