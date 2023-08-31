@@ -13,6 +13,7 @@
 NAME = Gestion
 
 TOUT_LES_MAKE_FILES =	./fract-ol-00 \
+						./fract-ol-01 \
 						./mini_lbx_boucle_exemple \
 						./mini_lbx_draw_exemple \
 						./mini_lbx_envent_exemple \
