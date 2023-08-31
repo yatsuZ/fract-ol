@@ -6,13 +6,14 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 22:27:57 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/01 01:35:40 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/01 01:40:54 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/fractol.h"
 
-//Si titre est dans la HEAP je dois free bref sa depend a verifier pour plus tard
+//Si titre est dans la HEAP je dois 
+//free bref sa depend a verifier pour plus tard
 t_window	*free_win(t_window *w)
 {
 	if (w->mlx_ptr && w->win_ptr)
@@ -32,19 +33,20 @@ t_window	*free_win(t_window *w)
 	return (NULL);
 }
 
-t_window	*ft_init_window(char *nom){
-	t_window	*win;
+t_window	*ft_init_window(char *nom)
+{
+	t_window	*w;
 
-	win = ft_calloc(1, sizeof(t_window));
-	if (!win)
-		return ((free(win)), NULL);
-	win->titre = nom;
-	win->mlx_ptr = mlx_init();
-	if (!win->mlx_ptr)
-		return (free_win(win));
-	mlx_get_screen_size(win->mlx_ptr, &win->len_x, &(win->len_y));
-	win->win_ptr = mlx_new_window(win->mlx_ptr, win->len_x, win->len_y, win->titre);
-	if (!win->win_ptr)
-		return (free_win(win));
-	return (win);
+	w = ft_calloc(1, sizeof(t_window));
+	if (!w)
+		return ((free(w)), NULL);
+	w->titre = nom;
+	w->mlx_ptr = mlx_init();
+	if (!w->mlx_ptr)
+		return (free_win(w));
+	mlx_get_screen_size(w->mlx_ptr, &w->len_x, &(w->len_y));
+	w->win_ptr = mlx_new_window(w->mlx_ptr, w->len_x, w->len_y, w->titre);
+	if (!w->win_ptr)
+		return (free_win(w));
+	return (w);
 }

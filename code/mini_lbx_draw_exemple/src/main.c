@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 15:38:45 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/10 02:27:51 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/01 01:42:39 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,12 +115,12 @@ int	main(void)
 	data = cree_fenetre("TEST", 500, 500);
 	if (!data)
 		return (1);
-	only_degrader(data);
-	img_pixel_put(data, 5, 5, 0x00FF0000);
-	blue_square(data);
-	draw_yellow_circle(data);
-	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img, 0, 0);
-	mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->len_x / 2, data->len_y / 2, 0xFFFFFFFF);
+	// only_degrader(data);
+	// img_pixel_put(data, 5, 5, 0x00FF0000);
+	// blue_square(data);
+	// draw_yellow_circle(data);
+	// mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img, 0, 0);
+	// mlx_pixel_put(data->mlx_ptr, data->win_ptr, data->len_x / 2, data->len_y / 2, 0xFFFFFFFF);
 	add_event(data);
 	mlx_loop(data->mlx_ptr);
 	return (free_data(data), ft_printf("-- FIN --\n"), 0);
