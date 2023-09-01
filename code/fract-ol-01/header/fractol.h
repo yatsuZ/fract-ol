@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:13:02 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/01 13:40:53 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/01 20:38:55 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@
 t_window	*ft_init_window(char *nom);
 t_window	*free_win(t_window *w);
 void		ft_add_event(t_window *w);
-
+int			ft_parsing(int argc, char **argv);
 #endif

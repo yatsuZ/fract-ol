@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lib_import.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:15:26 by yatsu             #+#    #+#             */
-/*   Updated: 2023/08/30 14:19:34 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/01 18:03:17 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include "./../library/libft/libft.h"
 # include "./../library/minilibx-linux/mlx.h"
+# include "constante.h"
 # include <stdlib.h>
 # include <unistd.h>
 

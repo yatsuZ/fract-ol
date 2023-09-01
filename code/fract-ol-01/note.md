@@ -28,3 +28,30 @@
 4. Pour debuter je vais jute essaye d'ecrire "HELLO WORLD!" et que le makefile puisse tout compilée.
 
 5. A présent que mon make marche je vais commence à faire ma to do liste que j'ai fais sur ma racine de mon repos.
+
+---
+
+|       CE QUE JE DOIS FAIRE        |  valide      |
+| ----------------------------- | ------------ |
+|      Crée une fenetre         | ✅ 01/09/2023 |
+| Faire qu'en appuyant sur echap la fenetre se ferme | ✅ 01/09/2023 |
+|      Deplacer la fenetre      | ✅ 01/09/2023 |
+| Faire que en appuyant sur la croix la fenetre se ferme |✅ 01/09/2023 |
+| Parsing pour choix de la fractal et couleur. |      ❌       |
+| Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ❌       |
+| Pouvoir zoomer et dezoome avec la souris |      ❌       |
+| Pouvoir deplacer la camera avec les fleches |      ❌       |
+| En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
+| Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ❌       |
+| Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
+| Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme doit afficher la liste des paramètres disponibles et quitter proprement. |      ❌       |
+| Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ❌       |
+| Malgres les redimension que la fenetre sadapte |      ❌       |
+
+```
+Au moins un paramètre est passé en ligne de commande pour définir quel type de
+fractale est à afficher dans la fenêtre.
+◦ Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu.
+◦ Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme
+doit afficher la liste des paramètres disponibles et quitter proprement.
+```
