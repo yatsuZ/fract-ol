@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:15:30 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/06 17:08:51 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/06 18:21:08 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ typedef struct s_window
 	char	*titre;
 	int		len_x;
 	int		len_y;
+	int		fractal;
+	int		color;
 	t_img	*img;
 }	t_window;
 

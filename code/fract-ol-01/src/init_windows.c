@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 22:27:57 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/06 17:51:12 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/06 19:36:45 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,3 @@ t_window	*ft_init_window(char *nom)
 		return (free_win(w));
 	return (w);
 }
-
-

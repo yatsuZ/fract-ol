@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 19:47:55 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/01 21:36:45 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/06 19:40:19 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int	bad_parsing()
 	ft_printf("============ ERREUR PARAMETRE ============\n");
 	ft_printf("\nExemple :\n\t\t\t./fractol [1] [2]\n\n");
 	ft_printf("============================================\n");
-	ft_printf("        [1]            |         [2]\n");
+	ft_printf("        [1]\t\t\t\t|         [2]\n");
 	ft_printf("============================================\n");
-	ft_printf("Le choix de la Fractal | Le choix de couleur\n");
-	ft_printf("                       |   Peut etre vide\n");
+	ft_printf("Le choix de la Fractal\t| Le choix de couleur\n");
+	ft_printf("\t\t\t\t\t\t|   Peut etre vide\n");
 	ft_printf("--------------------------------------------\n");
 	ft_printf("===================  Choix  ===============\n");
-	ft_printf("     Obligatoire       |      Possible\n");
-	ft_printf("     \"Julia\"          |  \"0\", \"1\", \"2\"\n");
-	ft_printf("    \"Mandelbrot\"      |          OU\n");
-	ft_printf("    \"Mystere\"         |         RIEN\n");
+	ft_printf("     Obligatoire\t\t|      Possible\n\n");
+	ft_printf("     \"Julia\"\t\t\t|\t\"0\", \"1\", \"2\"\n");
+	ft_printf("    \"Mandelbrot\"\t\t|          OU\n");
+	ft_printf("    \"Mystere\"\t\t\t|         RIEN\n");
 	ft_printf("============================================\n");
 	return (0);
 }

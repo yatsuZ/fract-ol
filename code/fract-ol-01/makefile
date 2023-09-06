@@ -6,7 +6,7 @@
 #    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 14:12:12 by yatsu             #+#    #+#              #
-#    Updated: 2023/09/01 20:36:11 by yzaoui           ###   ########.fr        #
+#    Updated: 2023/09/06 19:38:11 by yzaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@
 SRC_NAME_FILES	=	main.c			\
 					init_windows.c	\
 					add_event.c		\
+					geometrie_draw.c\
 					parsing.c
 SRC_PATH		=	./src/
 SRC				=	${addprefix ${SRC_PATH}, ${SRC_NAME_FILES}} 
