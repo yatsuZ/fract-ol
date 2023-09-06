@@ -37,7 +37,7 @@
 | Faire qu'en appuyant sur echap la fenetre se ferme | ✅ 01/09/2023 |
 |      Deplacer la fenetre      | ✅ 01/09/2023 |
 | Faire que en appuyant sur la croix la fenetre se ferme |✅ 01/09/2023 |
-| Parsing pour choix de la fractal et couleur. |      ❌       |
+| Parsing pour choix de la fractal. |✅ 01/09/2023|
 | Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ❌       |
 | Pouvoir zoomer et dezoome avec la souris |      ❌       |
 | Pouvoir deplacer la camera avec les fleches |      ❌       |
