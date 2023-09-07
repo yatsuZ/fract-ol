@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:13:02 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/06 19:33:31 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 15:25:57 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void		blue_square(t_window *w);
 void		green_triangle(t_window *w);
 void		draw_yellow_circle(t_window *w);
 void		img_pixel_put(t_img *img, int x, int y, int color);
+int			change_img(t_window *w, void (*f)(t_window *));
 
 #endif

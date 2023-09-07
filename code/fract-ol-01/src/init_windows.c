@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 22:27:57 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/06 19:36:45 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 15:25:38 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,12 @@ t_window	*ft_init_window(char *nom)
 	if (!w->win_ptr)
 		return (free_win(w));
 	return (w);
+}
+
+int	change_img(t_window *w, void (*f)(t_window *))
+{
+	free_img(w, w->img);
+	if (ft_init_img(w))
+		return (1);
+	return (f(w), 0);
 }

@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 19:31:51 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/06 19:38:33 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 15:41:55 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,23 @@ void	green_triangle(t_window *w)
 
 void	draw_yellow_circle(t_window *w)
 {
-	int	center_x = w->len_x / 2; // Coordonnée x du centre du 
-	int	center_y = w->len_y / 2; // Coordonnée y du centre du cercle
-	int	radius = w->len_y / 4; // Rayon du cercle
-	int	y = center_y - radius;
+	int	center_x;
+	int	center_y;
+	int	radius;
+	int	y;
+	int	x;
 
+	center_x = w->len_x / 2;
+	center_y = w->len_y / 2;
+	radius = w->len_y / 4;
+	y = center_y - radius;
 	while (y <= center_y + radius)
 	{
-		int	x = center_x - radius;
+		x = center_x - radius;
 		while (x <= center_x + radius)
 		{
-			int	dx = x - center_x;
-			int	dy = y - center_y;
-			int	distance = dx * dx + dy * dy;
-
-			if (distance <= radius * radius)
+			if (((x - center_x) * (x - center_x) + \
+			(y - center_y) * (y - center_y)) <= radius * radius)
 				img_pixel_put(w->img, x, y, 0x00FFFF00);
 			x++;
 		}

@@ -6,13 +6,13 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 19:47:55 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/06 19:40:19 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 15:39:37 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/fractol.h"
 
-int	bad_parsing()
+int	bad_parsing(void)
 {
 	ft_printf("============ ERREUR PARAMETRE ============\n");
 	ft_printf("\nExemple :\n\t\t\t./fractol [1] [2]\n\n");
@@ -67,7 +67,6 @@ int	find_color(char *arg)
 	return (0);
 }
 
-
 int	ft_parsing(int argc, char **argv)
 {
 	int	res;
@@ -77,6 +76,6 @@ int	ft_parsing(int argc, char **argv)
 		return (bad_parsing());
 	res = find_fractol(argv[1]);
 	if (!res)
-		return(bad_parsing());
+		return (bad_parsing());
 	return (res + find_color(argv[2]));
 }
