@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:12:38 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/07 16:17:20 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 16:49:43 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ int	main(int argc, char **argv)
 	window->color = param / 10;
 	if (!window)
 		return (0);
-	blue_square(window);
-	draw_yellow_circle(window);
-	green_triangle(window);
 	ft_add_event(window);
+	creat_mystere_fractal(window);
 	mlx_put_image_to_window(window->mlx_ptr, window->win_ptr, \
 	window->img->img_ptr, 0, 0);
 	mlx_loop(window->mlx_ptr);

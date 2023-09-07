@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/07 15:57:12 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 16:24:06 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,10 @@ int	ft_press_key(int key, void *w_v)
 	else if (key == LEFT)
 	{
 		ft_printf("←");
-		if (ft_change_geometrie(w, w->fractal - 1))
-			return (mlx_loop_end(w->mlx_ptr), 1);
 	}
 	else if (key == RIGHT)
 	{
 		ft_printf("→");
-		if (ft_change_geometrie(w, w->fractal + 1))
-			return (mlx_loop_end(w->mlx_ptr), 1);
-
 	}
 	else if (key == TOP)
 		ft_printf("↑");
