@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"lib_import.h": "c",
+		"fractol.h": "c",
+		"struct.h": "c",
+		"constante.h": "c"
+	}
+}

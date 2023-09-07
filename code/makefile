@@ -6,7 +6,7 @@
 #    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 14:26:23 by yzaoui            #+#    #+#              #
-#    Updated: 2023/08/29 15:01:33 by yzaoui           ###   ########.fr        #
+#    Updated: 2023/09/07 16:19:07 by yzaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ TOUT_LES_MAKE_FILES =	./fract-ol-00 \
 						./mini_lbx_boucle_exemple \
 						./mini_lbx_draw_exemple \
 						./mini_lbx_envent_exemple \
+						./mini_lbx_geometry
 
 EXEC = make -s -C
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   data_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:09:49 by yatsu             #+#    #+#             */
-/*   Updated: 2023/06/16 00:38:36 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/07 15:02:32 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,12 @@ t_data	*cree_fenetre(char *titre_fenetre, int len_x, int len_y)
 	if (!data->mlx_ptr)
 		return (free_data(data));
 	mlx_get_screen_size(data->mlx_ptr, &data->len_x, &(data->len_y));
+	
 	data->img_ptr = mlx_new_image(data->mlx_ptr, data->len_x, data->len_y);
 	if (!data->img_ptr)
 		return (free_data(data));
 	data->addr = mlx_get_data_addr(data->img_ptr, &data->bits_per_pixel, &data->line_length, &data->endian);
+	
 	data->win_ptr = \
 	mlx_new_window(data->mlx_ptr, data->len_x, data->len_y, data->titre);
 	if (!data->win_ptr)
