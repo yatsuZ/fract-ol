@@ -29,7 +29,7 @@ void	color4(t_window *w, int axe_x, int axe_y, int i)
 				color = 0x0000FF00;
 			else if (i > axe_x && j > axe_y)
 				color = 0x000000FF;
-			else if (i < axe_x && j > axe_y)
+			else
 				color = 0x00FF00FF;
 			img_pixel_put(w->img, i, j, color);
 			j++;
@@ -61,7 +61,7 @@ void	axe_xy(t_window *w, int axe_x, int axe_y, int i)
 	}
 }
 
-int	calcul(int x, int y, int n)
+int	calcul(int x, int y, int n, t_window *w)
 {
 	float	xc;
 	float	yc;
@@ -70,19 +70,25 @@ int	calcul(int x, int y, int n)
 
 	float		tmpx;
 	float		tmpy;
-	xc = x ;
-    yc = y ;
+	float		XMIN = -2.25;
+	float		XMAX = 1; 
+	float		YMIN = -1; 
+	float		YMAX = 1;
+	int	iter = 20;
+
+	xc = ((float)x / w->len_x) * (XMAX - XMIN) * 1 - 0.5;
+	yc = ((float)y / w->len_y) * (YMAX - YMIN) * 1;
 	xn = 0;
 	yn = 0;
-	while ((xn * xn + yn * yn) < 4 && n < 50)
+	while ((xn * xn + yn * yn) < 4 && n < iter)
 	{
 		tmpx = xn;
 		tmpy = yn;
 		xn = tmpx * tmpx - tmpy * tmpy + xc;
-		yn = 2 * tmpx + tmpy * tmpy + yc;
+		yn = 2 * tmpx * tmpy + yc;
 		n++;
 	}
-	if (n >= 1)
+	if (n == iter)
 	{
 		// ft_printf("%d\n", n);
 		return (1);
@@ -95,7 +101,7 @@ int	creat_mystere_fractal(t_window *w)
 {
 	int	i;
 	int	j;
-	int	x;
+	int	x;  
 	int	y;
 
 	i = 0;
@@ -106,7 +112,7 @@ int	creat_mystere_fractal(t_window *w)
 		{
 			x = i - w->len_x / 2;
 			y = j - w->len_y / 2;
-			if (calcul(x, y, 0))
+			if (calcul(x, y, 0, w))
 				img_pixel_put(w->img, i, j, 0xFF000000);
 			else
 				img_pixel_put(w->img, i, j, 0x00FFFFFF);

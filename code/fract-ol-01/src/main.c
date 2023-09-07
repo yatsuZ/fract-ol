@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 		return (0);
 	ft_add_event(window);
 	creat_mystere_fractal(window);
+	ft_printf("FINI");
 	mlx_put_image_to_window(window->mlx_ptr, window->win_ptr, \
 	window->img->img_ptr, 0, 0);
 	mlx_loop(window->mlx_ptr);
