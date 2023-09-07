@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:57:56 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/07 17:13:50 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 20:29:37 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,58 @@ void	axe_xy(t_window *w, int axe_x, int axe_y, int i)
 	}
 }
 
+int	calcul(int x, int y, int n)
+{
+	float	xc;
+	float	yc;
+	float		xn;
+	float		yn;
+
+	float		tmpx;
+	float		tmpy;
+	xc = x ;
+    yc = y ;
+	xn = 0;
+	yn = 0;
+	while ((xn * xn + yn * yn) < 4 && n < 50)
+	{
+		tmpx = xn;
+		tmpy = yn;
+		xn = tmpx * tmpx - tmpy * tmpy + xc;
+		yn = 2 * tmpx + tmpy * tmpy + yc;
+		n++;
+	}
+	if (n >= 1)
+	{
+		// ft_printf("%d\n", n);
+		return (1);
+	}
+	return (0);
+}
+
+
 int	creat_mystere_fractal(t_window *w)
 {
-	int axe_x;
-	int	axe_y;
+	int	i;
+	int	j;
+	int	x;
+	int	y;
 
-	axe_y = w->len_y / 2;
-	axe_x = w->len_x / 2;
-	color4(w, axe_x, axe_y, 0);
-	axe_xy(w, axe_x, axe_y, 0);
+	i = 0;
+	while (i != w->len_x)
+	{
+		j = 0;
+		while (j != w->len_y)
+		{
+			x = i - w->len_x / 2;
+			y = j - w->len_y / 2;
+			if (calcul(x, y, 0))
+				img_pixel_put(w->img, i, j, 0xFF000000);
+			else
+				img_pixel_put(w->img, i, j, 0x00FFFFFF);
+			j++;
+		}
+		i++;
+	}
 	return (0);
 }
