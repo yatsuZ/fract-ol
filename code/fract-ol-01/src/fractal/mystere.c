@@ -70,14 +70,16 @@ int	calcul(int x, int y, int n, t_window *w)
 
 	float		tmpx;
 	float		tmpy;
-	float		XMIN = -2.25;
-	float		XMAX = 1; 
-	float		YMIN = -1; 
-	float		YMAX = 1;
-	int	iter = 20;
+	float		XMIN = -5;
+	float		XMAX = 5; 
+	float		YMIN = -5; 
+	float		YMAX = 5;
+	int	iter = 25;
 
-	xc = ((float)x / w->len_x) * (XMAX - XMIN) * 1 - 0.5;
-	yc = ((float)y / w->len_y) * (YMAX - YMIN) * 1;
+	xc = ((float)x / w->len_x) * (XMAX - XMIN) - 0.5;// - pour decaler la camere et multiplier pour zoome 
+	yc = ((float)y / w->len_y) * (YMAX - YMIN) - 0.5 ;
+	if (xc == 0 || yc == 0)
+		return (2);
 	xn = 0;
 	yn = 0;
 	while ((xn * xn + yn * yn) < 4 && n < iter)
@@ -103,6 +105,7 @@ int	creat_mystere_fractal(t_window *w)
 	int	j;
 	int	x;  
 	int	y;
+	int	r;
 
 	i = 0;
 	while (i != w->len_x)
@@ -112,10 +115,15 @@ int	creat_mystere_fractal(t_window *w)
 		{
 			x = i - w->len_x / 2;
 			y = j - w->len_y / 2;
-			if (calcul(x, y, 0, w))
-				img_pixel_put(w->img, i, j, 0xFF000000);
-			else
+			r = calcul(x, y, 0, w);
+			if (!x || !y)
+				img_pixel_put(w->img, i, j, 0x000000FF);
+			else if (r == 1)
 				img_pixel_put(w->img, i, j, 0x00FFFFFF);
+			else if (r == 2)
+				img_pixel_put(w->img, i, j, 0x0000FF00);
+			else
+				img_pixel_put(w->img, i, j, 0xFF000000);
 			j++;
 		}
 		i++;
