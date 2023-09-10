@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 19:31:51 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/07 16:16:35 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/07 19:11:37 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,18 @@ void	draw_yellow_circle(t_window *w)
 	center_y = w->len_y / 2;
 	radius = w->len_y / 4;
 	y = center_y - radius;
+
+
 	while (y <= center_y + radius)
 	{
 		x = center_x - radius;
+
 		while (x <= center_x + radius)
 		{
-			if (((x - center_x) * (x - center_x) + \
-			(y - center_y) * (y - center_y)) <= radius * radius)
+			if (((x - center_x) * (x - center_x) + (y - center_y) * (y - center_y)) <= radius * radius)
 				img_pixel_put(w->img, x, y, 0x00FFFF00);
+			else
+				img_pixel_put(w->img, x, y, 0x00FFFFF0);
 			x++;
 		}
 		y++;

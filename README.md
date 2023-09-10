@@ -24,6 +24,14 @@ A chaque étape, vérifier l'absence de fuites de mémoire !!!
 | Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ❌       |
 | Malgres les redimension que la fenetre sadapte |      ❌       |
 
+```
+Au moins un paramètre est passé en ligne de commande pour définir quel type de
+fractale est à afficher dans la fenêtre.
+◦ Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu.
+◦ Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme
+doit afficher la liste des paramètres disponibles et quitter proprement.
+```
+
 ## Documentation
 
 - [vidéo interéssante qui parle des fractales.](https://youtu.be/wUlVFYJIUNA)
