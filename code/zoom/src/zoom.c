@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 16:09:20 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/11 00:45:08 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/11 01:49:39 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,13 +79,13 @@ int	draw_unite(t_window *w, int xf, int yf)
 	x = ((float)xf / (float)w->len_x) * (xmax - xmin) * w->camera->zoom + w->camera->x_decallage;// * w->camera->zoom ;
 	y = ((float)yf / (float)w->len_y) * (ymax - ymin) * w->camera->zoom + w->camera->y_decallage;// * w->camera->zoom ;
 	// printf("x = %f\n", x);
-	if ((x <= 0.01 && x >= -0.01 )|| (y <= 0.05 && y >= -0.05 ))
+	if ((x <= 0.05 && x >= -0.05 ) || (y <= 0.05 && y >= -0.05 ))
 		return (1);
 	if (x >= 1 && x <= 2 && y >= 1 && y <= 2)
 		return (2);
-	if ((y - (int) y<= 0.05 && y - (int) y>= -0.05 ))
+	if ((y - (int) y<= 0.05 && y - (int) y>= -0.05 ) && (x <= 0.5 && x >= -0.5 ))
 		return (3);
-	if ((x - (int) x<= 0.05 && x - (int) x>= -0.05 ))
+	if ((x - (int) x<= 0.05 && x - (int) x>= -0.05 ) && (y<= 0.5 && y>= -0.5 ))
 		return (4);
 	return (0);
 }
