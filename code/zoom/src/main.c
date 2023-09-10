@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:12:38 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/10 18:21:47 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/11 00:41:09 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 	window = ft_init_window("FRACT-OL 42 BY YATSU");
 	window->fractal = param % 10;
 	window->color = param / 10;
+	window->camera->zoom = 1;
 	if (!window)
 		return (0);
 	ft_add_event(window);

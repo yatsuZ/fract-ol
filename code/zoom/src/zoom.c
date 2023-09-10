@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zoom.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 16:09:20 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/10 19:39:21 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/11 00:45:08 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	for_each_pixel(t_window *w, void (*f)(t_window *w, int, int))
 
 void	ft_init_camera(t_camera *c)
 {
-	c->zoom = 1;
 	c->xmin = -10;
 	c->xmax = 10;
 	c->ymin = -10;
@@ -77,8 +76,8 @@ int	draw_unite(t_window *w, int xf, int yf)
 	ymax = 10;
 	xmin = -10;
 	ymin = -10;
-	x = ((float)xf / (float)w->len_x) * (xmax - xmin) * 0.4+ w->camera->x_decallage *0.4;
-	y = ((float)yf / (float)w->len_y) * (ymax - ymin) * 0.4+ w->camera->y_decallage *0.4;
+	x = ((float)xf / (float)w->len_x) * (xmax - xmin) * w->camera->zoom + w->camera->x_decallage;// * w->camera->zoom ;
+	y = ((float)yf / (float)w->len_y) * (ymax - ymin) * w->camera->zoom + w->camera->y_decallage;// * w->camera->zoom ;
 	// printf("x = %f\n", x);
 	if ((x <= 0.01 && x >= -0.01 )|| (y <= 0.05 && y >= -0.05 ))
 		return (1);
@@ -86,7 +85,7 @@ int	draw_unite(t_window *w, int xf, int yf)
 		return (2);
 	if ((y - (int) y<= 0.05 && y - (int) y>= -0.05 ))
 		return (3);
-	if ((x - (int) x<= 0.01 && x - (int) x>= -0.01 ))
+	if ((x - (int) x<= 0.05 && x - (int) x>= -0.05 ))
 		return (4);
 	return (0);
 }
