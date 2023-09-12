@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/11 01:03:42 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/12 11:16:03 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_mousse_click(int button, int x, int y, void *w_v)
 	// ft_printf("EVENT Button Release\t| X |\t");
 	if (button == LEFT_MOUSSE)
 	{
-		w->camera->x_decallage += ((float)x / (float)w->len_x) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
+		w->camera->x_decallage += ((float)x / (float)w->len_y) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
 		w->camera->y_decallage -= ((float)y / (float)w->len_y) * (w->camera->ymax - w->camera->ymin) * w->camera->zoom;
 		printf("\n\n X = %f\t\t Y = %f\n\n", w->camera->x_decallage, w->camera->y_decallage);
 		change_img(w, ft_cree_plan);
@@ -74,7 +74,7 @@ int	ft_mousse_click(int button, int x, int y, void *w_v)
 		change_img(w, ft_cree_plan);
 	}	else if (button == TOP_MOLETTE)
 	{
-		w->camera->x_decallage += ((float)x / (float)w->len_x) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
+		w->camera->x_decallage += ((float)x / (float)w->len_y) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
 		w->camera->y_decallage -= ((float)y / (float)w->len_y) * (w->camera->ymax - w->camera->ymin) * w->camera->zoom;
 		w->camera->zoom *= 1.25;
 		printf("\n\n ZOOM = %f\n\n", w->camera->zoom);
@@ -82,7 +82,7 @@ int	ft_mousse_click(int button, int x, int y, void *w_v)
 	}
 	else if (button == BOT_MOLETTE)
 	{
-		w->camera->x_decallage += ((float)x / (float)w->len_x) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
+		w->camera->x_decallage += ((float)x / (float)w->len_y) * (w->camera->xmax - w->camera->xmin) * w->camera->zoom;
 		w->camera->y_decallage -= ((float)y / (float)w->len_y) * (w->camera->ymax - w->camera->ymin) * w->camera->zoom;
 		w->camera->zoom *= 0.75;
 		printf("\n\n ZOOM = %f\n\n", w->camera->zoom);
