@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:13:02 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:08:24 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/13 15:34:46 by yassine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void		ft_deplacement(t_window *w, int i, int j);
 // FRACTAL
 int			calcul_de_suite(t_window *w, t_point z0, t_point c);
 void		creat_mystere_fractal(void *w_v);
+void		creat_mandelbrot_fractal(void *w_v);
 
 #endif

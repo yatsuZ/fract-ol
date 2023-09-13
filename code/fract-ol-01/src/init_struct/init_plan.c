@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_plan.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:04:55 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:19:45 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/13 18:28:42 by yassine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,12 @@ int	ft_init_plan(t_window *w)
 	w->plan = ft_calloc(1, sizeof(t_plan));
 	if (w->plan == NULL)
 		return (1);
-	if (w->id_fractal >= 0)
+	if (w->id_fractal == 3)
 		w->plan->f_fractal = creat_mystere_fractal;
+	else if (w->id_fractal == 2)
+		w->plan->f_fractal = creat_mandelbrot_fractal;
+	else
+		return (1);
 	w->plan->unite = w->len_x;
 	if (w->len_x > w->len_y)
 		w->plan->unite = w->len_y;

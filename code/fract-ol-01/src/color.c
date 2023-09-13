@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw.c                                             :+:      :+:    :+:   */
+/*   color.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 12:47:28 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 15:08:31 by yassine          ###   ########.fr       */
+/*   Created: 2023/09/13 15:07:56 by yassine           #+#    #+#             */
+/*   Updated: 2023/09/13 18:29:13 by yassine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/fractol.h"
 
-void	img_pixel_put(t_img *img, int i, int j, int color)
+void	put_color(t_window *w, int i, int j, int n)
 {
-	char	*dst;
+	int	color;
 
-	dst = img->addr + (j * img->line_length + i * (img->bits_per_pixel / 8));
-	*(unsigned int *)dst = color;
-}
-
-void	for_each_pixel(t_window *w, void (*f)(t_window *w, int, int))
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < w->len_x)
+	color = 7;
+	while (n > 0)
 	{
-		j = 0;
-		while (j < w->len_y)
-		{
-			f(w, i, j);
-			j++;
-		}
-		i++;
+		color = color * 2 ;
+		n--;
+	}
+	if (w->plan->n_max == n)
+		img_pixel_put(w->img, i, j, 0);
+	else
+	{
+		img_pixel_put(w->img, i, j, color);
 	}
 }
+// 0x00FFFFFF
+// Choisir la coulleur
