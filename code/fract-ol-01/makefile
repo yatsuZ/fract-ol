@@ -3,21 +3,34 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
+#    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 14:12:12 by yatsu             #+#    #+#              #
-#    Updated: 2023/09/07 16:31:09 by yzaoui           ###   ########.fr        #
+#    Updated: 2023/09/13 03:15:53 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+SRC_EVENT		=	zoom.c			\
+					deplacement.c
+FOLDER_EVENT	=	event/
+EVENT_PATH		=	${addprefix ${FOLDER_EVENT}, ${SRC_EVENT}}
 
 SRC_FRACTAL		=	mystere.c
 FOLDER_FRACTAL	=	fractal/
 FRACTAL_PATH	=	${addprefix ${FOLDER_FRACTAL}, ${SRC_FRACTAL}}
 
-SRC_NAME_FILES	=	${FRACTAL_PATH}	\
-					main.c			\
+SRC_STRUCT		=	init_img.c		\
 					init_windows.c	\
+					init_plan.c
+FOLDER_STRUC	=	init_struct/
+STRUCT_PATH		=	${addprefix ${FOLDER_STRUC}, ${SRC_STRUCT}}
+
+SRC_NAME_FILES	=	${EVENT_PATH}	\
+					${FRACTAL_PATH}	\
+					${STRUCT_PATH}	\
 					add_event.c		\
+					draw.c			\
+					main.c			\
 					parsing.c
 SRC_PATH		=	./src/
 SRC				=	${addprefix ${SRC_PATH}, ${SRC_NAME_FILES}} 

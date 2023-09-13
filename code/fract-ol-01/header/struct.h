@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:15:30 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/06 18:21:08 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/13 03:55:40 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,28 @@
 # include "./lib_import.h"
 
 // je definie mes structure ici.
+
+typedef struct s_point
+{
+	float	x;
+	float	y;
+	int		iteration;
+}	t_point;
+
+typedef struct s_plan
+{
+	void	(*f_fractal)(void *);
+	int		n_max;
+	float	unite;
+	float	xmin;
+	float	xmax;
+	float	ymin;
+	float	ymax;
+	float	zoom;
+	float	x_decallage;
+	float	y_decallage;
+}	t_plan;
+
 typedef struct s_img
 {
 	void	*img_ptr;
@@ -33,8 +55,9 @@ typedef struct s_window
 	char	*titre;
 	int		len_x;
 	int		len_y;
-	int		fractal;
+	int		id_fractal;
 	int		color;
+	t_plan	*plan;
 	t_img	*img;
 }	t_window;
 

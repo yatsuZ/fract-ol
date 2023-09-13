@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_event.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/07 16:24:06 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/13 04:08:08 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,21 +49,23 @@ int	ft_close_with_x(void *w_v)
 
 int	ft_mousse_click(int button, int x, int y, void *w_v)
 {
-	(void) w_v;
-	ft_printf("EVENT Button Release\t| X |\t");
-	if (button == LEFT_MOUSSE)
-		ft_printf(" | click Gauche\t\t|");
-	else if (button == MOLETTE)
-		ft_printf(" | click Molette\t|");
-	else if (button == TOP_MOLETTE)
-		ft_printf(" | rouleument Haut\t|");
+	t_window	*w;
+
+	w = (t_window *) w_v;
+	if (button == LEFT_MOUSSE || button == TOP_MOLETTE \
+	|| button == BOT_MOLETTE)
+		ft_deplacement(w, x, y);
+	if (button == TOP_MOLETTE)
+		ft_zoom(w->plan, -1);
 	else if (button == BOT_MOLETTE)
-		ft_printf(" | rouleument Bas\t|");
+		ft_zoom(w->plan, 1);
+	else if (button == MOLETTE)
+		reset_camera(w->plan);
 	else if (button == RIGHT_MOUSSE)
 		ft_printf(" | click Droit\t\t|");
 	else
 		ft_printf("| JSP\t\t\t\t|");
-	ft_printf(" X = %d, Y = %d\n", x, y);
+	change_img(w, w->plan->f_fractal);
 	return (0);
 }
 
