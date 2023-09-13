@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:45:37 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/12 12:52:52 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/13 04:11:36 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	free_img(t_window *w, t_img *img)
 	w->img = NULL;
 }
 
-int	change_img(t_window *w, void (*f)(t_window *))
+int	change_img(t_window *w, void (*f)(void *))
 {
 	free_img(w, w->img);
 	if (ft_init_img(w))

@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:47:28 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:07:33 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/13 04:12:33 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	put_color(t_window *w, int i, int j, int n)
 {
 	int	color;
 
-	color = 0;
+	color = 7;
 	while (n > 0)
 	{
 		color = color * 2 ;

@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:04:55 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:08:49 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/13 04:19:45 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	calcul_de_suite(t_window *w, t_point z0, t_point c)
 	float	tmpx;
 	float	tmpy;
 
-	while ((carre(z0.x) + carre(z0.y)) < (1 << 8) \
+	while ((carre(z0.x) + carre(z0.y)) < 4 \
 	&& z0.iteration < w->plan->n_max)
 	{
 		tmpx = z0.x;
