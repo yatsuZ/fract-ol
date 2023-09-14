@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_plan.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:04:55 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 18:28:42 by yassine          ###   ########.fr       */
+/*   Updated: 2023/09/14 12:47:21 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_init_plan(t_window *w)
 	w->plan->unite = w->len_x;
 	if (w->len_x > w->len_y)
 		w->plan->unite = w->len_y;
-	w->plan->n_max = 50;
+	w->plan->n_max = 225;
 	reset_camera(w->plan);
 	return (0);
 }

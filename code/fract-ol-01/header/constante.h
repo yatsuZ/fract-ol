@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   constante.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:36:49 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/01 19:19:12 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/14 15:32:16 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@
 # define RIGHT_MOUSSE		3
 # define TOP_MOLETTE		4
 # define BOT_MOLETTE		5
+# define KEY_C				99
 
 #endif

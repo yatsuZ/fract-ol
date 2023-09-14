@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mystere.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:57:56 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/13 18:26:33 by yassine          ###   ########.fr       */
+/*   Updated: 2023/09/14 01:27:26 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_mystere(t_window *w, int i, int j)
 	* (w->plan->ymax - w->plan->ymin) \
 	* w->plan->zoom + w->plan->y_decallage;
 	z0.iteration = 0;
-	c.x = 0.285;
-	c.y = 0.01;
+	c.x = -0.29436;
+	c.y = -0.76214;
 	c.iteration = 0;
 	z0.iteration = calcul_de_suite(w, z0, c);
 	put_color(w, i, j, z0.iteration);

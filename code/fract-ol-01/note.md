@@ -38,11 +38,11 @@
 |      Deplacer la fenetre      | ✅ 01/09/2023 |
 | Faire que en appuyant sur la croix la fenetre se ferme |✅ 01/09/2023 |
 | Parsing pour choix de la fractal. |✅ 01/09/2023|
-| Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ❌       |
-| Pouvoir zoomer et dezoome avec la souris |      ❌       |
+| Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ✅       |
+| Pouvoir zoomer et dezoome avec la souris |      ✅       |
 | Pouvoir deplacer la camera avec les fleches |      ❌       |
 | En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
-| Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ❌       |
+| Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ✅       |
 | Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
 | Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme doit afficher la liste des paramètres disponibles et quitter proprement. |      ❌       |
 | Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ❌       |

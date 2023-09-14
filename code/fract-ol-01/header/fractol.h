@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yassine <yassine@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:13:02 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 15:34:46 by yassine          ###   ########.fr       */
+/*   Updated: 2023/09/14 14:25:20 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void		reset_camera(t_plan *p);
 void		for_each_pixel(t_window *w, void (*f)(t_window *w, int, int));
 void		img_pixel_put(t_img *img, int x, int y, int color);
 void		put_color(t_window *w, int i, int j, int n);
+void		ft_change_color(t_window *w);
 
 // EVENT
 void		ft_add_event(t_window *w);

@@ -6,7 +6,7 @@
 /*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:08:08 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 15:32:26 by yatsu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ int	ft_press_key(int key, void *w_v)
 		ft_printf("↑");
 	else if (key == BOT)
 		ft_printf("↓");
+	else if (key == KEY_C)
+		ft_change_color(w);
+	ft_printf("%d\n", key);
 	return (0);
 }
 
@@ -52,10 +55,9 @@ int	ft_mousse_click(int button, int x, int y, void *w_v)
 	t_window	*w;
 
 	w = (t_window *) w_v;
-	if (button == LEFT_MOUSSE || button == TOP_MOLETTE \
-	|| button == BOT_MOLETTE)
+	if (button == LEFT_MOUSSE)
 		ft_deplacement(w, x, y);
-	if (button == TOP_MOLETTE)
+	else if (button == TOP_MOLETTE)
 		ft_zoom(w->plan, -1);
 	else if (button == BOT_MOLETTE)
 		ft_zoom(w->plan, 1);
