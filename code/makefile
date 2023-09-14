@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
+#    By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 14:26:23 by yzaoui            #+#    #+#              #
-#    Updated: 2023/09/07 16:19:07 by yzaoui           ###   ########.fr        #
+#    Updated: 2023/09/11 00:17:30 by yatsu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@ TOUT_LES_MAKE_FILES =	./fract-ol-00 \
 						./mini_lbx_boucle_exemple \
 						./mini_lbx_draw_exemple \
 						./mini_lbx_envent_exemple \
-						./mini_lbx_geometry
+						./mini_lbx_geometry \
+						./mini_lbx-00 \
+						./zoom \
 
 EXEC = make -s -C
 
