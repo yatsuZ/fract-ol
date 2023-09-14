@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:15:30 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 03:55:40 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 19:59:43 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_point
 typedef struct s_plan
 {
 	void	(*f_fractal)(void *);
+	t_point	*julia;
 	int		n_max;
 	float	unite;
 	float	xmin;

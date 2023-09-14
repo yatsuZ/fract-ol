@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_windows.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 22:27:57 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 03:55:36 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 20:02:47 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_window	*free_win(t_window *w)
 	return (NULL);
 }
 
-t_window	*ft_init_window(char *nom, int id_f, int color)
+t_window	*ft_init_window(char *nom, int id_f, int color, t_point *julia)
 {
 	t_window	*w;
 
@@ -49,7 +49,7 @@ t_window	*ft_init_window(char *nom, int id_f, int color)
 	if (!w->mlx_ptr)
 		return (free_win(w));
 	mlx_get_screen_size(w->mlx_ptr, &w->len_x, &(w->len_y));
-	if (ft_init_img(w) || ft_init_plan(w))
+	if (ft_init_img(w) || ft_init_plan(w, julia))
 		return (free_win(w));
 	w->win_ptr = mlx_new_window(w->mlx_ptr, w->len_x, w->len_y, w->titre);
 	if (!w->win_ptr)

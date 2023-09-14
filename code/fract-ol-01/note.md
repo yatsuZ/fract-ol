@@ -40,13 +40,13 @@
 | Parsing pour choix de la fractal. |✅ 01/09/2023|
 | Essaye d'apliquer les ensembles de Julia et Mandelbrot. |      ✅       |
 | Pouvoir zoomer et dezoome avec la souris |      ✅       |
-| Pouvoir deplacer la camera avec les fleches |      ❌       |
-| En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
+| Pouvoir deplacer la camera avec les fleches |      ✅       |
 | Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ✅       |
-| Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
+| Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ✅       |
+| Malgres les redimension que la fenetre sadapte |      ✅       |
 | Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme doit afficher la liste des paramètres disponibles et quitter proprement. |      ❌       |
-| Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ❌       |
-| Malgres les redimension que la fenetre sadapte |      ❌       |
+| En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
+| Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
 
 ```
 Au moins un paramètre est passé en ligne de commande pour définir quel type de

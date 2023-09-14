@@ -3,14 +3,16 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yassine <yassine@student.42.fr>            +#+  +:+       +#+         #
+#    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 14:12:12 by yatsu             #+#    #+#              #
-#    Updated: 2023/09/13 15:34:13 by yassine          ###   ########.fr        #
+#    Updated: 2023/09/14 21:13:48 by yzaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC_EVENT		=	zoom.c			\
+					color_change.c	\
+					fractal_change.c\
 					deplacement.c
 FOLDER_EVENT	=	event/
 EVENT_PATH		=	${addprefix ${FOLDER_EVENT}, ${SRC_EVENT}}
@@ -29,6 +31,7 @@ STRUCT_PATH		=	${addprefix ${FOLDER_STRUC}, ${SRC_STRUCT}}
 SRC_NAME_FILES	=	${EVENT_PATH}	\
 					${FRACTAL_PATH}	\
 					${STRUCT_PATH}	\
+					param_jualia.c	\
 					add_event.c		\
 					draw.c			\
 					main.c			\

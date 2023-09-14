@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_plan.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:04:55 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/14 12:47:21 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 23:17:10 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	reset_camera(t_plan *p)
 }
 
 //modifier pour la selection des f est couleur
-int	ft_init_plan(t_window *w)
+int	ft_init_plan(t_window *w, t_point *j)
 {
 	w->plan = ft_calloc(1, sizeof(t_plan));
 	if (w->plan == NULL)
@@ -31,6 +31,7 @@ int	ft_init_plan(t_window *w)
 		w->plan->f_fractal = creat_mandelbrot_fractal;
 	else
 		return (1);
+	w->plan->julia = j;
 	w->plan->unite = w->len_x;
 	if (w->len_x > w->len_y)
 		w->plan->unite = w->len_y;
@@ -43,6 +44,9 @@ void	free_plan(t_plan *p)
 {
 	if (p == NULL)
 		return ;
+	if (p->julia)
+		free(p->julia);
+	p->julia = 0;
 	p->f_fractal = NULL;
 	p->unite = 0;
 	p->xmin = 0;
@@ -71,6 +75,10 @@ int	calcul_de_suite(t_window *w, t_point z0, t_point c)
 	{
 		tmpx = z0.x;
 		tmpy = z0.y;
+		if (tmpy > 0)
+			tmpy *= -1;
+		if (tmpx < 0)
+			tmpx *= -1;
 		z0.x = carre(tmpx) - carre(tmpy) + c.x;
 		z0.y = 2 * tmpx * tmpy + c.y;
 		if (z0.x == tmpx && z0.y == tmpy)

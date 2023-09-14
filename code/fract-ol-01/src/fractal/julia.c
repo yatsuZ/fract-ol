@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mystere.c                                          :+:      :+:    :+:   */
+/*   julia.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 16:57:56 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/14 20:59:06 by yzaoui           ###   ########.fr       */
+/*   Created: 2023/09/14 23:13:40 by yzaoui            #+#    #+#             */
+/*   Updated: 2023/09/14 23:20:35 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header/fractol.h"
 
-void	ft_mystere(t_window *w, int i, int j)
+void	ft_julia(t_window *w, int i, int j)
 {
 	t_point	z0;
 
@@ -27,7 +27,7 @@ void	ft_mystere(t_window *w, int i, int j)
 	put_color(w, i, j, z0.iteration);
 }
 
-void	camera_mystere(t_plan *p)
+void	camera_julia(t_plan *p)
 {
 	p->xmin = -2;
 	p->xmax = 2;
@@ -35,11 +35,11 @@ void	camera_mystere(t_plan *p)
 	p->ymax = 2;
 }
 
-void	creat_mystere_fractal(void *w_c)
+void	creat_julia_fractal(void *w_c)
 {
 	t_window	*w;
 
 	w = (t_window *) w_c;
-	camera_mystere(w->plan);
-	for_each_pixel(w, ft_mystere);
+	camera_julia(w->plan);
+	for_each_pixel(w, ft_julia);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 19:47:55 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/14 14:41:51 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 23:13:12 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,34 @@ int	ft_str_cmp(char *s1, char *s2)
 	return (s1[i] != s2[i]);
 }
 
-int	find_fractol(char *arg)
+int	find_fractol(char **arg_v, int argc, t_point **julia)
 {
+	char	*arg;
+
+	arg = arg_v[1];
+	if (get_param_julia(arg_v[2], julia))
+		return (0);
 	if (!(ft_str_cmp(arg, "J")))
 		return (1);
 	else if (!(ft_str_cmp(arg, "M")))
 		return (2);
 	else if ((!ft_str_cmp(arg, "My")))
 		return (3);
+	if (argc == 2)
+		return (0);
 	return (0);
 }
 
-int	find_color(char *arg)
+int	find_color(char **arg_v, int argc)
 {
+	char	*arg;
+
+	if (argc <= 2)
+		return (0);
+	else if (argc == 3)
+		arg = arg_v[2];
+	else
+		arg = arg_v[3];
 	if ((!ft_str_cmp(arg, "1")))
 		return (10);
 	else if ((!ft_str_cmp(arg, "2")))
@@ -77,15 +92,15 @@ int	find_color(char *arg)
 	return (0);
 }
 
-int	ft_parsing(int argc, char **argv)
+int	ft_parsing(int argc, char **argv, t_point **julia)
 {
 	int	res;
 
 	res = 0;
-	if (argc <= 1 || argc > 3)
+	if (argc <= 1 || argc > 4)
 		return (bad_parsing());
-	res = find_fractol(argv[1]);
+	res = find_fractol(argv, argc, julia);
 	if (!res)
 		return (bad_parsing());
-	return (res + find_color(argv[2]));
+	return (res + find_color(argv, argc));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_event.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/14 15:32:26 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/14 17:59:54 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,17 @@ int	ft_press_key(int key, void *w_v)
 	if (key == ESC)
 		mlx_loop_end(w->mlx_ptr);
 	else if (key == LEFT)
-	{
-		ft_printf("←");
-	}
+		ft_deplacement_fleche(w, 1);
 	else if (key == RIGHT)
-	{
-		ft_printf("→");
-	}
+		ft_deplacement_fleche(w, 2);
 	else if (key == TOP)
-		ft_printf("↑");
+		ft_deplacement_fleche(w, 3);
 	else if (key == BOT)
-		ft_printf("↓");
+		ft_deplacement_fleche(w, 4);
 	else if (key == KEY_C)
 		ft_change_color(w);
+	else if (key == KEY_F)
+		ft_change_fractal(w);
 	ft_printf("%d\n", key);
 	return (0);
 }
