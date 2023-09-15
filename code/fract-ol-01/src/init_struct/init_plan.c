@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:04:55 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/14 23:17:10 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 17:38:09 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ int	ft_init_plan(t_window *w, t_point *j)
 	w->plan = ft_calloc(1, sizeof(t_plan));
 	if (w->plan == NULL)
 		return (1);
-	if (w->id_fractal == 3)
-		w->plan->f_fractal = creat_mystere_fractal;
+	if (w->id_fractal == 1)
+		w->plan->f_fractal = creat_julia_fractal;
 	else if (w->id_fractal == 2)
 		w->plan->f_fractal = creat_mandelbrot_fractal;
+	else if (w->id_fractal == 3)
+		w->plan->f_fractal = creat_burning_sheap_fractal;
 	else
 		return (1);
 	w->plan->julia = j;
@@ -36,6 +38,7 @@ int	ft_init_plan(t_window *w, t_point *j)
 	if (w->len_x > w->len_y)
 		w->plan->unite = w->len_y;
 	w->plan->n_max = 225;
+	printf("\nid fractal = %d\n\n", w->id_fractal);
 	reset_camera(w->plan);
 	return (0);
 }
@@ -70,16 +73,11 @@ int	calcul_de_suite(t_window *w, t_point z0, t_point c)
 	float	tmpx;
 	float	tmpy;
 
-	while ((carre(z0.x) + carre(z0.y)) < 4 \
-	&& z0.iteration < w->plan->n_max)
+	while (z0.x * z0.x + z0.y * z0.y < 4 && z0.iteration < w->plan->n_max)
 	{
 		tmpx = z0.x;
 		tmpy = z0.y;
-		if (tmpy > 0)
-			tmpy *= -1;
-		if (tmpx < 0)
-			tmpx *= -1;
-		z0.x = carre(tmpx) - carre(tmpy) + c.x;
+		z0.x = tmpx * tmpx - tmpy * tmpy + c.x;
 		z0.y = 2 * tmpx * tmpy + c.y;
 		if (z0.x == tmpx && z0.y == tmpy)
 			return (w->plan->n_max);

@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 21:02:13 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/14 23:03:17 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 18:28:22 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 float	ft_atof2(char *str, size_t i, int *error)
 {
-	float nbr;
+	float	nbr;
 
 	nbr = 0;
 	if (!(str[i] >= '0' && str[i] <= '9'))
@@ -36,9 +36,9 @@ float	ft_atof2(char *str, size_t i, int *error)
 float	ft_atof(char *nptr, size_t i, int *error)
 {
 	float	nbr;
-	int			signe;
+	int		signe;
 
-	if (*(error) || !(nptr[i + 1] >= '0' && nptr[i + 1] <= '9'))
+	if (*error || !(nptr[i + 1] >= '0' && nptr[i + 1] <= '9'))
 		return (*error = 1, 0);
 	nbr = 0;
 	signe = 1;
@@ -68,17 +68,28 @@ void	julia_par_default(t_point *j, t_point **julia)
 	*julia = j;
 }
 
-int	get_param_julia(char *arg, t_point **julia)
+int	init_var(int *error, char **arg, char **argv, int argc)
 {
+	if (argc <= 2)
+		return (1);
+	*error = 0;
+	*arg = argv[2];
+	if (!(argv[2][0] == '-' || argv[2][0] == '+'))
+		return (1);
+	return (0);
+}
+
+int	get_param_julia(char **arg_v, t_point **julia, int argc)
+{
+	char	*arg;
 	int		s;
 	int		error;
 	t_point	*j;
 
-	error = 0;
 	j = ft_calloc(sizeof(t_point), 1);
 	if (!j)
 		return (1);
-	if (!(arg[0] == '-' || arg[0] == '+'))
+	if (init_var(&error, &arg, arg_v, argc))
 		return (julia_par_default(j, julia), 0);
 	s = 0;
 	j->x = ft_atof(arg, s, &error);

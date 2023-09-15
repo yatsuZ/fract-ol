@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zoom.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yatsu <yatsu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:44:18 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/13 04:03:47 by yatsu            ###   ########.fr       */
+/*   Updated: 2023/09/15 19:01:53 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,10 @@ void	ft_zoom(t_plan *p, int sens)
 	if (sens == -1)
 		unite = 0.90;
 	p->zoom *= unite;
+}
+
+void	ft_zoom_key(t_window *w, int sens)
+{
+	ft_zoom(w->plan, sens);
+	change_img(w, w->plan->f_fractal);
 }

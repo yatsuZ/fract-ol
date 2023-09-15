@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 17:36:49 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/14 17:59:23 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 18:55:37 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@
 # define BOT_MOLETTE		5
 # define KEY_C				99
 # define KEY_F				102
+# define KEY_PLUS			65451
+# define KEY_MOIN			65453
 
 #endif

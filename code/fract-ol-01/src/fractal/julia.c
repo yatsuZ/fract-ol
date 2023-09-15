@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 23:13:40 by yzaoui            #+#    #+#             */
-/*   Updated: 2023/09/14 23:20:35 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 17:42:11 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void	creat_julia_fractal(void *w_c)
 
 	w = (t_window *) w_c;
 	camera_julia(w->plan);
+	printf("JULIA, %f\n%f \n\n", w->plan->julia->x, w->plan->julia->y);
 	for_each_pixel(w, ft_julia);
 }

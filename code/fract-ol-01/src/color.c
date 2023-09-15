@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:07:56 by yassine           #+#    #+#             */
-/*   Updated: 2023/09/14 23:11:57 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 18:17:13 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	black_white(t_window *w, int i, int j, int n)
 		img_pixel_put(w->img, i, j, stable);
 	else
 		img_pixel_put(w->img, i, j, diverge);
-
 }
 
 void	put_color(t_window *w, int i, int j, int n)
@@ -51,7 +50,3 @@ void	put_color(t_window *w, int i, int j, int n)
 		color = color * 11;
 	img_pixel_put(w->img, i, j, color);
 }
-
-
-// Modifier le parsingf 
-// Faire une derniere fractal

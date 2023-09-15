@@ -6,7 +6,7 @@
 #    By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 14:12:12 by yatsu             #+#    #+#              #
-#    Updated: 2023/09/14 21:13:48 by yzaoui           ###   ########.fr        #
+#    Updated: 2023/09/15 17:17:31 by yzaoui           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRC_EVENT		=	zoom.c			\
 FOLDER_EVENT	=	event/
 EVENT_PATH		=	${addprefix ${FOLDER_EVENT}, ${SRC_EVENT}}
 
-SRC_FRACTAL		=	mystere.c		\
+SRC_FRACTAL		=	julia.c			\
+					burning_sheap.c	\
 					mandelbrot.c
 FOLDER_FRACTAL	=	fractal/
 FRACTAL_PATH	=	${addprefix ${FOLDER_FRACTAL}, ${SRC_FRACTAL}}

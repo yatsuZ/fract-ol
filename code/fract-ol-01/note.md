@@ -44,9 +44,9 @@
 | Au moins un paramètre est passé en ligne de commande pour définir quel type de fractale est à afficher dans la fenêtre. |      ✅       |
 | Il doit y avoir un jeu de couleur minimum pour ressentir la profondeur de chaque fractale. |      ✅       |
 | Malgres les redimension que la fenetre sadapte |      ✅       |
-| Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme doit afficher la liste des paramètres disponibles et quitter proprement. |      ❌       |
-| En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ❌       |
-| Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ❌       |
+| Si aucun paramètre n’est fourni ou si le paramètre est invalide, le programme doit afficher la liste des paramètres disponibles et quitter proprement. |      ✅       |
+| En donnant des paramètres différents au programme, il doit être possible de créer différents ensembles de Julia. |      ✅       |
+| Il est possible de gérer des paramètres en plus afin de les utiliser pour le rendu. |      ✅       |
 
 ```
 Au moins un paramètre est passé en ligne de commande pour définir quel type de

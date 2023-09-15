@@ -6,7 +6,7 @@
 /*   By: yzaoui <yzaoui@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 13:39:25 by yatsu             #+#    #+#             */
-/*   Updated: 2023/09/14 17:59:54 by yzaoui           ###   ########.fr       */
+/*   Updated: 2023/09/15 19:03:33 by yzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int	ft_press_key(int key, void *w_v)
 		ft_change_color(w);
 	else if (key == KEY_F)
 		ft_change_fractal(w);
-	ft_printf("%d\n", key);
+	else if (key == KEY_PLUS)
+		ft_zoom_key(w, -1);
+	else if (key == KEY_MOIN)
+		ft_zoom_key(w, +1);
 	return (0);
 }
 
@@ -53,9 +56,9 @@ int	ft_mousse_click(int button, int x, int y, void *w_v)
 	t_window	*w;
 
 	w = (t_window *) w_v;
-	if (button == LEFT_MOUSSE)
+	if (button == LEFT_MOUSSE || button == TOP_MOLETTE || button == BOT_MOLETTE)
 		ft_deplacement(w, x, y);
-	else if (button == TOP_MOLETTE)
+	if (button == TOP_MOLETTE)
 		ft_zoom(w->plan, -1);
 	else if (button == BOT_MOLETTE)
 		ft_zoom(w->plan, 1);
